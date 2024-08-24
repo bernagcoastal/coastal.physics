@@ -27,29 +27,63 @@
 
 
         <header class="w3-container w3-center w3-padding-32">
-            <h1>Wave spectra</h1>
+            <h1>Water wave spectrum</h1>
         </header>
 
 
         <section class="w3-container w3-padding">
             <article class="w3-card-4 w3-padding w3-white">
-                <h2 class="we-center">What is a wave spectra</h2>
+                <h2 class="we-center">What is a water wave spectrum</h2>
                 <p class="we-center"><small>Bernabe Gomez</small></p>
-                <p>is a probabilistic distribution of wave heights are periods related to the frequency by 1/T
+                <p>A water wave spectrum is a graphical representation that shows the distribution of energy across different 
+                    wave frequencies (or wavelengths) in a body of water. It provides a detailed description of the sea state, 
+                    indicating how the energy of the waves is spread over a range of frequencies or directions
                 </p>
+                
+                <p>The relation between period and frequency</p>
+                <p>
+                    \[
+                    T = \frac{1}{f} 
+                    \]
+                </p>
+                <p>where f is the frequency in Hertz [Hz] and T is the period in seconds [s].</p>
+
+                <p>In the most common type of wave spectrum, the horizontal axis represents wave frequency
+                    or wave period, while the vertical axis shows the energy density 
+                    (measured in square meters per Hertz, \( \frac{m^2}{Hz} \)). The shape of the spectrum can 
+                    provide insights into the wave conditions:</p>
     
                 <h2 class="we-center">Where to find data</h2>
-                <p>CDIP provides spectral data on the locations where they have buoys deployed.</p>
+                <p>he Coastal Data Information Program (CDIP) provides spectral data collected from various 
+                    locations where they have deployed wave buoys.</p>
     
                 <h2 class="we-center">Analysis of the data</h2>
-                <p>In my Github page you can find python codes to extract cdip data <a href="https://github.com/bernagcoastal/Wave-time-series">Github</a></p>
-                <p>First locate the buoy that you want in the explorer <a href="https://cdip.ucsd.edu/m/deployment/station_view/"></a></p>
+                <p>In my Github page you can find python codes to extract, plot and analyze CDIP data <a href="https://github.com/bernagcoastal/Wave-time-series">Github</a></p>
+                <p>The first step is to locate the location that you are interested in and the closest
+                     buoy to that point in the CDIP interactive explorer 
+                    <a href="https://cdip.ucsd.edu/m/deployment/station_view/"></a></p>
                 <img src="img/cdip_map.png" class="centered-image" style="display: block; margin: 0 auto; width: 600px; height: 300px;">
-                <p class="we-center"><small>Interactive map</small></p>
+                <p class="we-center"><small>Interactive CDIP map with deployed buoy locations</small></p>
 
+                <p>Once the buoy and its ID code are identified we can proceed to the extraction of the data. For 
+                    our case we have selected the station 215 with an start date for the data that we need 10/01/2020 02:00.
+                </p>
+
+                <p>We are extracting the data in the format netCDF, it is recommended intalling the python library netCDF4 in the environment 
+                    that we are working on.
+                </p>
 
                 <img src="img/cdip_web.png" class="centered-image" style="display: block; margin: 0 auto; width: 600px; height: 800px;">
-                <p class="we-center"><small>Extracted</small></p>
+                <p class="we-center"><small>Extracted data, top: frequency spectrum; bottom: average frequency directions</small></p>
+
+                <p>In our example we are extracting 1 dimensional spectrum, which means that we have for each frequency bin
+                    only one estimate of the average frequency density and direction. In the script provided on my github page
+                    you can find functions to save your data in .txt files for future use.
+                </p>
+
+                <h2 class="we-center">Significant wave height and peak period</h2>
+
+                <p></p>
 
             </article>
         </section>

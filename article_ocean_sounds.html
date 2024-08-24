@@ -27,48 +27,75 @@
 
 
         <header class="w3-container w3-center w3-padding-32">
-            <h1>Ocean sounds</h1>
+            <h1>Ocean acoustic signals processing</h1>
         </header>
 
 
             <!-- Main Content Section -->
     <section class="w3-container w3-padding">
         <article class="w3-card-4 w3-padding w3-white">
-            <h2 class="we-center">What are ocean sounds</h2>
+            <h2 class="we-center">What are hydro-acoustic signals</h2>
             <p class="we-center"><small>Bernabe Gomez</small></p>
-            <p>Compression and expansion of a media, waves travel they are energy. They can be recorded
-                by distant hydrophones and give insight on acoustics
+            <p>Ocean acoustics involve the study of sound waves as they travel through water. These sound waves are created by the 
+                compression and expansion of the medium, and as they propagate, they carry energy through the water. By using distant 
+                hydrophones (underwater microphones), scientists can record these sound waves. Analyzing these recordings 
+                provides valuable insights into the underwater environment, including information about marine life, underwater 
+                topography, and even the detection of natural and human-made events.
             </p>
 
-            <h2 class="we-center">Where to find data</h2>
-            <p>Canada Ocean Networks, you can find data from a network of hydrophones width
-                different characteristics open access.</p>
+            <h2 class="we-center">Open access hydro-acoustic data</h2>
+            <p>Ocean Networks Canada (ONC) provides open access to a wealth of oceanographic data collected from a network of 
+                hydrophones with varying characteristics. These hydrophones are strategically deployed along the coastlines and 
+                underwater observatories to capture detailed acoustic data. The recordings from these hydrophones can be used to 
+                study marine ecosystems, monitor underwater seismic activity, and observe human impact on the ocean environment. 
+                ONC's data is available for researchers, educators, and the general public, facilitating a wide range of scientific 
+                studies and environmental monitoring efforts.</p>
 
-            <h2 class="we-center">Analysis of the data</h2>
-            <p>In my Github page you can find codes to analyse ocean sounds with examples such as orcas calls recorded by
-                canada ocean networks and earthquakes. <a href="https://github.com/bernagcoastal/Acoustic-signals">Github</a></p>
-            <p>For this lesson one earthquake is analysed, the data is downloaded in a .wav file and python language is used
-                to read the file and plot it
+            <h2 class="we-center">Extracting and analyzing the data</h2>
+            <p>On my GitHub page, you can find codes for analyzing ocean sounds, including examples such as orca calls recorded 
+                by Canada's Ocean Networks and sounds from earthquakes. <a href="https://github.com/bernagcoastal/Acoustic-signals">Github</a></p>
+            <p>In this lesson, we analyze one earthquake by downloading the data as a .wav file. Python is then used to read 
+                the file and plot the earthquake's sound waves. First we plot the time series of the signal:
             </p>
             <img src="img/signal_web.png" class="centered-image">
-            <p class="we-center"><small>Signal of Earthquake South of Port Hardy, Vancouver Island</small></p>
+            <p class="we-center"><small>Signal of an Earthquake at South of Port Hardy, Vancouver Island</small></p>
+
+            <p>On the next step we will analyse the frequency content by plotting the fourier transform of the time series signal,
+                for this purpuse we can utilize the FFT algorithm with is a fast implementation of the Discrete fourier transform:
+            </p>
 
             <img src="img/spectrum_web.png" class="centered-image">
-            <p class="we-center"><small>FFT applied</small></p>
+            <p class="we-center"><small>FFT applied to the earthquake signal</small></p>
 
+            <p>The fourier transform only provides information about the frequency content of the analysed signal. However, 
+                if we want to bserve how that frequency content varies in time we need to calculate the spectrogram, which is 
+                composed by dividing the time series into multiple windows and cmputing fourier transforms of each window and then
+                plotting everything together.
+            </p>
 
-            <p>From here a spectrogram can be computed which gives information about time and frequency</p>
             <img src="img/spectrogram_web.png" class="centered-image">
-            <p class="we-center"><small>Spectrogram</small></p>
+            <p class="we-center"><small>Spectrogram f the earthquake signal</small></p>
 
 
-            <p>Also wavelet transform which acts as filters</p>
+            <p>A wavelet transform is a mathematical technique used to decompose a signal into different frequency components, each 
+                with its own resolution. Unlike the Fourier transform, which represents a signal using sine and cosine functions with a 
+                constant frequency over time, the wavelet transform uses functions called wavelets that can vary in scale and position. 
+                This allows it to provide both time and frequency information simultaneously, making it particularly useful for analyzing 
+                non-stationary or transient signals.</p>
+
+
+            <p>In wavelet analysis, the scale parameter determines the width (or duration) of the wavelet. Lower scales correspond 
+                to narrower (shorter duration) wavelets, which capture high-frequency details (fast changes). Higher scales correspond 
+                to wider (longer duration) wavelets, which capture low-frequency components (slow changes or trends). As we can see below:</p>
+
             <img src="img/wavelet_coeffs_web.png" style="display: block; margin: 0 auto; width: 600px; height: 400px;">
-            <p class="we-center"><small>Wavelet level coefficients</small></p>
+            <p class="we-center"><small>Wavelet scales which act as low pass filters</small></p>
 
-            <p>And scalogram</p>
+            <p>A scalogram is a powerful tool for visualizing the time-scale representation of a signal using wavelet transforms. 
+                It helps understand how the frequency content of a signal changes over time, making it valuable for analyzing complex, 
+                time-varying phenomena in various fields, including ocean acoustics, seismology, and biomedical engineering.</p>
             <img src="img/scalogram_web.png" class="centered-image">
-            <p class="we-center"><small>Scalogram</small></p>
+            <p class="we-center"><small>Scalogram of the earthquake signal</small></p>
         </article>
     </section>
 

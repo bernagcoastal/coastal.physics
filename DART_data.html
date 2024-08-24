@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <title>Bernabe Gomez</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <!-- NAVIGATION -->
+        <div class="w3-top">
+            <div class="w3-bar w3-dark-grey">
+                <span class="branding w3-bar-item w3-mobile">Bernabe Gomez Coastal Engineering</span>
+                <span class="w3-right w3-mobile">
+                    <a href="index.html" class="w3-bar-item w3-button w3-mobile w3-hover-blue">Home</a>
+                    <a href="research.html" class="w3-bar-item w3-button w3-mobile w3-hover-blue">Research</a>
+                    <a href="codes.html" class="w3-bar-item w3-button w3-mobile w3-hover-blue">Signal processing</a>
+                    <a href="#contact" class="w3-bar-item w3-button w3-mobile w3-hover-blue">Contact</a>
+                </span>
+            </div>
+        </div>
+
+        
+
+
+        <header class="w3-container w3-center w3-padding-32">
+            <h1>Water wave spectrum</h1>
+        </header>
+
+
+        <section class="w3-container w3-padding">
+            <article class="w3-card-4 w3-padding w3-white">
+                <h2 class="we-center">What is the DART network</h2>
+                <p class="we-center"><small>Bernabe Gomez</small></p>
+                <p>The DART (Deep-ocean Assessment and Reporting of Tsunamis) network is a system of buoys and sensors designed to 
+                    monitor and detect tsunamis in the deep ocean. <a href="https://www.ndbc.noaa.gov/obs.shtml?lat=13&lon=-173&zoom=2&pgm=tsunami" class="read-more">DART Wesite</a></p>
+
+                <img src="img/dart_locations.jpg" class="centered-image" style="display: block; margin: 0 auto; width: 600px; height: 400px;">
+                <p class="we-center"><small>Map of DART buoy locations</small></p>
+
+
+                <p>We choose the station, Station 46404 - WEST ASTORIA</p>
+                <p>On 11 March 2011, at 14:46 JST (05:46 UTC), a Mw 9.0 to 9.1 Tohoku earthquake</p>
+                <p>we can look for data in either heights (wave heights, with a sampling period of 45 minutes) 
+                    or events where the sampling period is 1 minute</p>
+                <p>The format of the data downloaded is #YY  MM DD hh mm ss T   HEIGHT</p>
+
+
+                <img src="img/tsunami_web.png" class="centered-image" style="display: block; margin: 0 auto; width: 900px; height: 500px;">
+                <p class="we-center"><small>Extracted water level time series</small></p>
+
+                <p>You can find the Jypyter notebook code here <a href="https://github.com/bernagcoastal/Wave-time-series/blob/main/dart_data.ipynb" class="read-more">CODE</a></p>
+
+            </article>
+        </section>
+
+
+
+        <!-- FOOTER -->
+         <footer class="w3-black w3-padding-xlarge w3-center">
+            <p>Bernabe Gomez. Los Angeles, California. USA.</p>
+         </footer>
+
+          <script>
+            function accFunction(id) {
+              var x = document.getElementById(id);
+              if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+              } else {
+                x.className = x.className.replace(" w3-show", "");
+              }
+            }
+            </script>
+    </body>
+</html>
