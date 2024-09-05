@@ -13,15 +13,16 @@
         <!-- NAVIGATION -->
         <div class="w3-top">
             <div class="w3-bar w3-dark-grey">
-                <span class="branding w3-bar-item w3-mobile">Bernabe Gomez Coastal Engineering</span>
+                <span class="branding w3-bar-item w3-mobile">bluecoastresearch.org</span>
                 <span class="w3-right w3-mobile">
-                    <a href="index.html" class="w3-bar-item w3-button w3-mobile w3-hover-blue">Home</a>
+                    <a href="#" class="w3-bar-item w3-button w3-mobile w3-hover-blue">Home</a>
                     <a href="research.html" class="w3-bar-item w3-button w3-mobile w3-hover-blue">Research</a>
-                    <a href="codes.html" class="w3-bar-item w3-button w3-mobile w3-hover-blue">Signal processing</a>
+                    <a href="codes.html" class="w3-bar-item w3-button w3-mobile w3-hover-blue">Resources</a>
+                    <a href="about.html" class="w3-bar-item w3-button w3-mobile w3-hover-blue">About</a>
                     <a href="#contact" class="w3-bar-item w3-button w3-mobile w3-hover-blue">Contact</a>
                 </span>
             </div>
-        </div>
+            </div>
 
         
 
@@ -53,7 +54,7 @@
 
             <h2 class="we-center">Extracting and analyzing the data</h2>
             <p>On my GitHub page, you can find codes for analyzing ocean sounds, including examples such as orca calls recorded 
-                by Canada's Ocean Networks and sounds from earthquakes. <a href="https://github.com/bernagcoastal/Acoustic-signals">Github</a></p>
+                by Canada's Ocean Networks and sounds from earthquakes. <a href="https://github.com/bernagcoastal/Acoustic-signals">Python Code</a></p>
             <p>In this lesson, we analyze one earthquake by downloading the data as a .wav file. Python is then used to read 
                 the file and plot the earthquake's sound waves. First we plot the time series of the signal:
             </p>
@@ -88,8 +89,12 @@
                 to narrower (shorter duration) wavelets, which capture high-frequency details (fast changes). Higher scales correspond 
                 to wider (longer duration) wavelets, which capture low-frequency components (slow changes or trends). As we can see below:</p>
 
-            <img src="img/wavelet_coeffs_web.png" style="display: block; margin: 0 auto; width: 600px; height: 400px;">
+            <img src="img/wavelet_coeffs_web.png" style="display: block; margin: 0 auto; width: 600px; height: 550px;">
             <p class="we-center"><small>Wavelet scales which act as low pass filters</small></p>
+
+            <p>In this case we chose to decompose the signal into five levels. In the first decomposition level, the signal is split
+                 into a low-frequency approximation and a high-frequency detail.
+                In the second level, the approximation is further decomposed into another set of approximation and detail coefficients, and so on.</p>
 
             <p>A scalogram is a powerful tool for visualizing the time-scale representation of a signal using wavelet transforms. 
                 It helps understand how the frequency content of a signal changes over time, making it valuable for analyzing complex, 
