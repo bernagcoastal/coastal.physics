@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <title>Bernabe Gomez</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <!-- NAVIGATION -->
+        <div class="w3-top">
+            <div class="w3-bar w3-dark-grey">
+                <span class="branding w3-bar-item w3-mobile">bluecoastresearch.org</span>
+                <span class="w3-right w3-mobile">
+                    <a href="#" class="w3-bar-item w3-button w3-mobile w3-hover-blue">Home</a>
+                    <a href="research.html" class="w3-bar-item w3-button w3-mobile w3-hover-blue">Research</a>
+                    <a href="codes.html" class="w3-bar-item w3-button w3-mobile w3-hover-blue">Resources</a>
+                    <a href="about.html" class="w3-bar-item w3-button w3-mobile w3-hover-blue">About</a>
+                    <a href="#contact" class="w3-bar-item w3-button w3-mobile w3-hover-blue">Contact</a>
+                </span>
+            </div>
+            </div>
+
+        
+
+
+        <header class="w3-container w3-center w3-padding-32">
+            <h1>Water wave buoy data</h1>
+        </header>
+
+
+        <section class="w3-container w3-padding">
+            <article class="w3-card-4 w3-padding w3-white">
+                <h2 class="we-center">Extract and analyse wave buoy data</h2>
+                <p class="we-center"><small></small></p>
+                <p>Wave climates are primarily characterised by three key parameters: significant wave 
+                    height (Hs), peak period (Tp), and wave direction.
+                </p>
+                <p>
+                <strong>Significant wave height</strong>, Hs, is defined as the average height of the highest one-third of waves recorded in a sea state. It is measured in metres (m) and represents the energy level of the wave field.
+                </p>
+                <p>The <strong>peak period</strong> (Tp) is the wave period associated with the maximum energy in the wave spectrum. It is measured in seconds (s) and indicates the dominant wave period.
+                </p>
+                <p>
+                <strong>Wave direction</strong> describes the direction from which the waves are coming. It is expressed in degrees (°) using a compass convention where 0° corresponds to North, 90° to East, 180° to South, and 270° to West.
+                </p>
+                
+    
+                <h2 class="we-center">Where to find data</h2>
+                <p>The Spanish national monitoring network operated by Puertos del Estado provides open-access wave data from offshore buoys distributed along the 
+                    Spanish coastline. These buoys measure a range of oceanographic and meteorological variables in near real time.</p>
+                <img src="img/puertos1.jpg" class="centered-image" style="display: block; margin: 0 auto; width: 800px; height: 400px;">
+                <p class="we-center"><small>Interactive Puertos map and interface</small></p>
+
+                <p>Data can de publicly accesses through: <a href="https://portus.puertos.es/">Puertos del Estado PORTUS website</a></p>
+                
+    
+                <h2 class="we-center">Analysis of the data</h2>
+                <p>In my Github page you can find python codes with examples to plot and analyze Puertos del Estadowave buoy data <a href="https://github.com/bernagcoastal/wave_rose">Github</a></p>
+                <p>The first step is to locate the site that you are interested in and the closest
+                     buoy to that point in the Puertos del estado interactive explorer, in the image below
+                     you can see in a red circle the selected buoy and Oleaje (Waves) as the selected parameter
+                     to download
+                    </p>
+                <img src="img/puertos2.jpg" class="centered-image" style="display: block; margin: 0 auto; width: 800px; height: 400px;">
+                <p class="we-center"><small>Interactive Puertos map and selected buoy and variables</small></p>
+
+                <p>In the example provided in my Github page <a href="https://github.com/bernagcoastal/wave_rose">(Click here to go to my Github)</a>, you can find a pre-downloaded dataset for the year 2025 from the 
+<strong>'Boya de Algeciras-Pta. Carnero'</strong> location. 
+A Python script is also included, which reads the data and visualises the main variables, as shown in the image below.
+                </p>
+
+                <img src="img/series2.jpg" class="centered-image" style="display: block; margin: 0 auto; width: 1200px; height: 300px;">
+                <p class="we-center"><small>Significant wave height (Top), Peak period (Mid) and Wave Direction (Bottom) for 2025 at 'Boya de Algeciras-Pta. Carnero'</small></p>
+
+                <p>In addition, after visualising the data, significant wave height and wave direction can be used to identify the dominant wave directions through wave rose analysis.
+                </p>
+                <img src="img/series1.jpg" class="centered-image" style="display: block; margin: 0 auto; width: 600px; height: 470px;">
+                <p class="we-center"><small>Wave rose for 2025 at 'Boya de Algeciras-Pta. Carnero'</small></p>
+
+
+                <p>Pro tip: Experiment with the Python code to customise the wave rose properties, such as the number of directional bins.
+                </p>
+
+
+
+            </article>
+        </section>
+
+
+
+        <!-- FOOTER -->
+         <footer class="w3-black w3-padding-xlarge w3-center">
+            <p>Bernabe Gomez. Los Angeles, California. USA.</p>
+         </footer>
+
+          <script>
+            function accFunction(id) {
+              var x = document.getElementById(id);
+              if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+              } else {
+                x.className = x.className.replace(" w3-show", "");
+              }
+            }
+            </script>
+    </body>
+</html>
